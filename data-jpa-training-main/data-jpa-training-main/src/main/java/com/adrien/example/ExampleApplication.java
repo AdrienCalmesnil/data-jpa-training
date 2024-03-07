@@ -8,11 +8,7 @@ import org.springframework.context.annotation.Bean;
 public class ExampleApplication {
 
 	public static void main(String[] args) {
-
-		var ctx = SpringApplication.run(ExampleApplication.class, args);
-
-		MyFirstClass myFirstClass = ctx.getBean("myFirstBean", MyFirstClass.class);
-		System.out.println(myFirstClass.hello());
+		SpringApplication.run(ExampleApplication.class);
 	}
 
 }
