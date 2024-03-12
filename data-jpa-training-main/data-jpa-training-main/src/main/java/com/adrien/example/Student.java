@@ -3,7 +3,7 @@ package com.adrien.example;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "T_STUDENT")
 public class Student {
     @Id
     @GeneratedValue
