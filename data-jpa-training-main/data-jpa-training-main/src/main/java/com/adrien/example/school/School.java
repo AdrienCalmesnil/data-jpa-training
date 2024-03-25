@@ -1,5 +1,6 @@
-package com.adrien.example;
+package com.adrien.example.school;
 
+import com.adrien.example.student.Student;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

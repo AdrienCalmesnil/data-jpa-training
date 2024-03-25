@@ -1,4 +1,4 @@
-package com.adrien.example;
+package com.adrien.example.school;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

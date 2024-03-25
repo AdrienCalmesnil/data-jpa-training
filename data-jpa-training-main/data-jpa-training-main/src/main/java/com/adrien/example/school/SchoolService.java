@@ -1,5 +1,8 @@
-package com.adrien.example;
+package com.adrien.example.school;
 
+import com.adrien.example.school.SchoolDto;
+import com.adrien.example.school.SchoolMapper;
+import com.adrien.example.school.SchoolRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

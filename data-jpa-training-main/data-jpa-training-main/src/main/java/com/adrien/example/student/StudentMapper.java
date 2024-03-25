@@ -1,5 +1,6 @@
-package com.adrien.example;
+package com.adrien.example.student;
 
+import com.adrien.example.school.School;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,5 +1,7 @@
-package com.adrien.example;
+package com.adrien.example.student;
 
+import com.adrien.example.school.School;
+import com.adrien.example.studentprofile.StudentProfile;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 

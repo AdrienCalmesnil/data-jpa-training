@@ -1,5 +1,6 @@
-package com.adrien.example;
+package com.adrien.example.studentprofile;
 
+import com.adrien.example.student.Student;
 import jakarta.persistence.*;
 
 @Entity
