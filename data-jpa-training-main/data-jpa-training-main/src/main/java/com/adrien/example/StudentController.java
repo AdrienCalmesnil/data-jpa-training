@@ -8,35 +8,34 @@ import java.util.List;
 @RestController
 public class StudentController {
 
-    private final StudentRepository repository;
-
-    public StudentController(StudentRepository repository) {
-        this.repository = repository;
+    private final StudentService studentService;
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
     }
 
     @PostMapping("/students")
-    public Student post(@RequestBody Student student){
-        return repository.save(student);
+    public StudentResponseDto saveStudent(@RequestBody StudentDto dto){
+        return studentService.saveStudent(dto);
     }
 
     @GetMapping("/students")
-    public List<Student> findAllStudents(){
-        return repository.findAll();
+    public List<StudentResponseDto> findAllStudents(){
+        return studentService.findAllStudents();
     }
 
     @GetMapping("/students/{student-id}")
-    public Student findStudentById(@PathVariable("student-id") Integer id){
-        return repository.findById(id).orElse(new Student());
+    public StudentResponseDto findStudentById(@PathVariable("student-id") Integer id){
+        return studentService.findStudentById(id);
     }
 
     @GetMapping("/students/search/{student-name}")
-    public List<Student> findStudentsByName(@PathVariable("student-name") String name){
-        return repository.findAllByFirstnameContaining(name);
+    public List<StudentResponseDto> findStudentsByName(@PathVariable("student-name") String name){
+        return studentService.findStudentsByName(name);
     }
 
     @DeleteMapping("/students/{student-id}")
     @ResponseStatus(HttpStatus.OK)
     public void delete(@PathVariable("student-id") Integer id){
-        repository.deleteById(id);
+        studentService.delete(id);
     }
 }

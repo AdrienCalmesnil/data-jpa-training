@@ -11,11 +11,11 @@ public class Student {
     private Integer id;
     @Column(name = "c_fname", length = 20)
     private String firstname;
-    @Column
+
     private String lastname;
     @Column(unique = true)
     private String email;
-    @Column
+
     private int age;
 
     @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)

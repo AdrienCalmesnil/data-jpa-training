@@ -9,20 +9,20 @@ import java.util.List;
 
 @RestController
 public class SchoolController {
-
-    private final SchoolRepository repository;
-
-    public SchoolController(SchoolRepository repository) {
-        this.repository = repository;
+    private final SchoolService schoolService;
+    public SchoolController(SchoolService schoolService) {
+        this.schoolService = schoolService;
     }
 
     @PostMapping("/schools")
-    public School create(@RequestBody School school){
-        return repository.save(school);
+    public SchoolDto create(@RequestBody SchoolDto dto){
+        return schoolService.create(dto);
     }
 
+
+
     @GetMapping("/schools")
-    public List<School> findAll(){
-        return repository.findAll();
+    public List<SchoolDto> findAll(){
+        return schoolService.findAll();
     }
 }
